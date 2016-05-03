@@ -17,6 +17,7 @@
 		999632CA1C85F8F000FF3520 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999632C91C85F8F000FF3520 /* ItemStore.swift */; };
 		999632CE1C85FC1500FF3520 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999632CD1C85FC1500FF3520 /* ItemTableViewController.swift */; };
 		99D3A53B1CD91E6A009C43B7 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3A53A1CD91E6A009C43B7 /* ItemCell.swift */; };
+		99D3A53D1CD95D30009C43B7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3A53C1CD95D30009C43B7 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		999632C91C85F8F000FF3520 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemStore.swift; path = ../ItemStore.swift; sourceTree = "<group>"; };
 		999632CD1C85FC1500FF3520 /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemTableViewController.swift; path = ../ItemTableViewController.swift; sourceTree = "<group>"; };
 		99D3A53A1CD91E6A009C43B7 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		99D3A53C1CD95D30009C43B7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				999632CD1C85FC1500FF3520 /* ItemTableViewController.swift */,
 				999632C91C85F8F000FF3520 /* ItemStore.swift */,
+				99D3A53C1CD95D30009C43B7 /* DetailViewController.swift */,
 				999632931C85047D00FF3520 /* AppDelegate.swift */,
 				999632C51C85057800FF3520 /* Item.swift */,
 				99D3A53A1CD91E6A009C43B7 /* ItemCell.swift */,
@@ -271,6 +274,7 @@
 				999632941C85047D00FF3520 /* AppDelegate.swift in Sources */,
 				999632C61C85057800FF3520 /* Item.swift in Sources */,
 				999632CE1C85FC1500FF3520 /* ItemTableViewController.swift in Sources */,
+				99D3A53D1CD95D30009C43B7 /* DetailViewController.swift in Sources */,
 				999632CA1C85F8F000FF3520 /* ItemStore.swift in Sources */,
 				99D3A53B1CD91E6A009C43B7 /* ItemCell.swift in Sources */,
 			);
