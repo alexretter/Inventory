@@ -14,6 +14,15 @@ class ItemTableViewController: UITableViewController {
     
     @IBAction func addNewItem(sender: AnyObject) {
         
+        let newItem = itemStore.createItem()
+        
+        if let index = itemStore.allItems.indexOf(newItem) {
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            
+            //Insert new row into the table
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+        
     }
     
     @IBAction func toggleEditingMode(sender: AnyObject) {
@@ -75,17 +84,18 @@ class ItemTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
+            let item = itemStore.allItems[indexPath.row]
+            itemStore.removeItem(item)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
