@@ -96,6 +96,10 @@ class ItemTableViewController: UITableViewController {
         }    
     }
     
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+    }
+    
 
     /*
     // Override to support rearranging the table view.

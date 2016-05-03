@@ -26,5 +26,21 @@ class ItemStore {
             allItems.removeAtIndex(index)
         }
     }
+    
+    func moveItemAtIndex(fromIndex: Int, toIndex: Int) {
+        
+        if fromIndex == toIndex {
+            return
+        }
+        
+        //Get reference from object being moved so you can relocate it
+        let movedItem = allItems[fromIndex]
+        
+        //Remove item from array
+        allItems.removeAtIndex(fromIndex)
+        
+        //Insert item in array at new location
+        allItems.insert(movedItem, atIndex: toIndex)
+    }
 
 }
