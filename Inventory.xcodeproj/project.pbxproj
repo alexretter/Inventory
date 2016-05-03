@@ -16,6 +16,7 @@
 		999632C61C85057800FF3520 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999632C51C85057800FF3520 /* Item.swift */; };
 		999632CA1C85F8F000FF3520 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999632C91C85F8F000FF3520 /* ItemStore.swift */; };
 		999632CE1C85FC1500FF3520 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999632CD1C85FC1500FF3520 /* ItemTableViewController.swift */; };
+		99D3A53B1CD91E6A009C43B7 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3A53A1CD91E6A009C43B7 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		999632C51C85057800FF3520 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		999632C91C85F8F000FF3520 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemStore.swift; path = ../ItemStore.swift; sourceTree = "<group>"; };
 		999632CD1C85FC1500FF3520 /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemTableViewController.swift; path = ../ItemTableViewController.swift; sourceTree = "<group>"; };
+		99D3A53A1CD91E6A009C43B7 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +106,9 @@
 				999632CD1C85FC1500FF3520 /* ItemTableViewController.swift */,
 				999632C91C85F8F000FF3520 /* ItemStore.swift */,
 				999632931C85047D00FF3520 /* AppDelegate.swift */,
-				999632971C85047D00FF3520 /* Main.storyboard */,
 				999632C51C85057800FF3520 /* Item.swift */,
+				99D3A53A1CD91E6A009C43B7 /* ItemCell.swift */,
+				999632971C85047D00FF3520 /* Main.storyboard */,
 				9996329A1C85047D00FF3520 /* Assets.xcassets */,
 				9996329C1C85047D00FF3520 /* LaunchScreen.storyboard */,
 				9996329F1C85047D00FF3520 /* Info.plist */,
@@ -269,6 +272,7 @@
 				999632C61C85057800FF3520 /* Item.swift in Sources */,
 				999632CE1C85FC1500FF3520 /* ItemTableViewController.swift in Sources */,
 				999632CA1C85F8F000FF3520 /* ItemStore.swift in Sources */,
+				99D3A53B1CD91E6A009C43B7 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +499,7 @@
 				999632BA1C85047D00FF3520 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		999632BB1C85047D00FF3520 /* Build configuration list for PBXNativeTarget "InventoryTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +508,7 @@
 				999632BD1C85047D00FF3520 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		999632BE1C85047D00FF3520 /* Build configuration list for PBXNativeTarget "InventoryUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +517,7 @@
 				999632C01C85047D00FF3520 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
