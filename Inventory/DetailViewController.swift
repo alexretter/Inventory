@@ -79,6 +79,20 @@ class DetailViewController: UIViewController, UINavigationControllerDelegate, UI
         }
         
         imagePicker.delegate = self
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+        
+        //Get image from info dict
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        //Put image on imageView
+        imageView.image = image
+        
+        //Take imagePicker off screen 
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 
