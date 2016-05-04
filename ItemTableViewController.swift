@@ -12,6 +12,7 @@ class ItemTableViewController: UITableViewController {
     
     var itemStore: ItemStore!
     var imageStore: ImageStore!
+    var countArray: [Int] = []
     
     @IBAction func addNewItem(sender: AnyObject) {
         
@@ -133,5 +134,13 @@ class ItemTableViewController: UITableViewController {
             }
         }
     }
+    
+    func counter(array: [Int]) {
+        countArray = [0]
+        for i in countArray {
+            countArray.append(i)
+        }
+    }
+    
     
 }
