@@ -14,7 +14,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var valueField: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
     
-    var item: Item!
+    var item: Item! {
+        didSet {
+            navigationItem.title = item.name
+        }
+    }
     
     let numberFormatter: NSNumberFormatter = {
         let formatter = NSNumberFormatter()
@@ -44,6 +48,24 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        //Save changes to item
+        item.name = nameTextField.text ?? ""
+        item.serialNumber = serialNumberField.text
+        
+        if let valueField = valueField.text,
+            value = numberFormatter.numberFromString(valueField) {
+            item.valueInDollars = value.integerValue
+        } else {
+            item.valueInDollars = 0
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 

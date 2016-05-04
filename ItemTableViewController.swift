@@ -37,8 +37,14 @@ class ItemTableViewController: UITableViewController {
             setEditing(true, animated: true)
         }
         
+        
     }
 
+    override func viewWillAppear(animated: Bool) {
+
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,7 +55,7 @@ class ItemTableViewController: UITableViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
-    
+        
     }
 
     override func didReceiveMemoryWarning() {
