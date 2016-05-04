@@ -50,5 +50,16 @@ class ItemStore {
         //Insert item in array at new location
         allItems.insert(movedItem, atIndex: toIndex)
     }
+    
+    func saveChanges() -> Bool {
+        
+        print("SAVING ITEMS TO \(itemArchiveURL.path!)")
+        return NSKeyedArchiver.archiveRootObject(allItems, toFile: itemArchiveURL.path!)
+    }
 
+    init() {
+        if let archivedItems = NSKeyedUnarchiver.unarchiveObjectWithFile(itemArchiveURL.path!) as? [Item] {
+            allItems += archivedItems
+        }
+    }
 }

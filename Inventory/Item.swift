@@ -56,5 +56,17 @@ class Item: NSObject {
         aCoder.encodeObject(serialNumber, forKey: "serialNumber")
         aCoder.encodeInteger(valueInDollars, forKey: "valueInDollars")
     }
+    
+    required init(coder aDecoder: NSCoder) {
+        
+        name = aDecoder.decodeObjectForKey("name") as! String
+        dateCreated = aDecoder.decodeObjectForKey("dateCreated") as! NSDate
+        itemKey = aDecoder.decodeObjectForKey("itemKey") as! String
+        serialNumber = aDecoder.decodeObjectForKey("serialNumber") as! String
+        valueInDollars = aDecoder.decodeIntegerForKey("valueInDollars")
+        
+        super.init()
+        
+    }
 
 }
