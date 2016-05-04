@@ -21,6 +21,8 @@ class DetailViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     
+    var imageStore: ImageStore!
+    
     let numberFormatter: NSNumberFormatter = {
         let formatter = NSNumberFormatter()
         formatter.numberStyle = .DecimalStyle
@@ -87,6 +89,9 @@ class DetailViewController: UIViewController, UINavigationControllerDelegate, UI
         
         //Get image from info dict
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        //Store image in imageStore for the items key
+        imageStore.setImage(image, forKey: item.itemKey)
         
         //Put image on imageView
         imageView.image = image
