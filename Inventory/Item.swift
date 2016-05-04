@@ -48,5 +48,13 @@ class Item: NSObject {
     
     
     }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(name, forKey: "name")
+        aCoder.encodeObject(dateCreated, forKey: "dateCreated")
+        aCoder.encodeObject(itemKey, forKey: "itemKey")
+        aCoder.encodeObject(serialNumber, forKey: "serialNumber")
+        aCoder.encodeInteger(valueInDollars, forKey: "valueInDollars")
+    }
 
 }

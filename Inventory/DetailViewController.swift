@@ -46,6 +46,13 @@ class DetailViewController: UIViewController, UINavigationControllerDelegate, UI
         serialNumberField.text = item.serialNumber
         valueField.text = numberFormatter.stringFromNumber(item.valueInDollars)
         dateLabel.text = dateFormatter.stringFromDate(item.dateCreated)
+        
+        //Get item key
+        let key = item.itemKey
+        
+        //If there is image associated with item, display on image view
+        let imageToDisplay = imageStore.imageForKey(key)
+        imageView.image = imageToDisplay
     }
 
     override func viewDidLoad() {
