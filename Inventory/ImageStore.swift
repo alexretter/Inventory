@@ -41,6 +41,12 @@ class ImageStore {
     
     func deleteImageForKey(key: String) {
         cache.removeObjectForKey(key)
+        let imageURL = imageURLForKey(key)
+        do {
+            try NSFileManager.defaultManager().removeItemAtURL(imageURL)
+        } catch let deleteError {
+            print("ERROR REMOVING IMAGE FROM DISK: \(deleteError)")
+        }
     }
     
     func imageURLForKey(key: String) -> NSURL {
