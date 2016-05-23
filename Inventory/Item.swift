@@ -28,8 +28,8 @@ class Item: NSObject {
     
     convenience init(random: Bool = false) {
         if random {
-            let adjectives = ["Fluffy", "Rusty", "Shiny"]
-            let nouns = ["Bear", "Spork", "Cheese"]
+            let adjectives = ["", "", ""]
+            let nouns = ["", "", ""]
             
             var idx = arc4random_uniform(UInt32(nouns.count))
             let randomAdjective = adjectives[Int(idx)]
@@ -45,7 +45,6 @@ class Item: NSObject {
         } else {
             self.init(name: "", valueInDollars: 0,  serialNumber: nil, dateCreated: NSDate())
         }
-    
     
     }
     
